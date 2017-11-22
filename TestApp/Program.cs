@@ -11,7 +11,18 @@ namespace TestApp {
 
         static void Main(string[] args) {
 
-            while(true)
+
+            Employee[] tab = new Employee[3];
+            tab[0] = new Technicien("Roger");
+            tab[1] = new Secretaire("Jaqueline");
+            tab[2] = new Technicien("Raymond");
+
+            foreach (Employee e in tab) {
+                e.GetDescription();
+                Console.WriteLine();
+            }
+
+            while (true)
             {
                 Console.Write("Choisissez un exercice à executer : ");
                 int res = Int32.Parse(Console.ReadLine());
